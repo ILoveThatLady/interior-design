@@ -1,18 +1,21 @@
-import React from 'react'
-import Hero from './components/Hero'
-import About from './components/About'
-import Find from './components/Find'
-import Form from './components/Form'
+import React, { useState, useEffect } from 'react'
+import { Hero, About, Find, Form, Gallery } from './components'
 import './App.css'
 
-
 const App = () => {
+  const [showContent, setShowContent] = useState(true);
+
+  const handleClick = () => {
+    setShowContent(!showContent)
+  }
+
   return (
-    <div>
-      <Hero />
-      <About />
-      <Find />
-      <Form />
+    <div className='main--container'>
+      { showContent ? <Hero /> : null }
+      { showContent ? <About /> : null }
+      { showContent ? <Find onClick={handleClick} /> : null }
+      { showContent ? <Form /> : null }
+      { !showContent ? <Gallery /> : null }
     </div>
   )
 }
