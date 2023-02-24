@@ -1,7 +1,7 @@
 import React from 'react'
 import './About.css'
 
-const About = () => {
+const About = (props:any) => {
   return (
     <div className='abt--container'>
       <div className='txt--container'>

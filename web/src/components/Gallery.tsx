@@ -1,7 +1,7 @@
 import React from 'react'
 import './Gallery.css'
 
-const Gallery = () => {
+const Gallery = (props: any) => {
   return (
       <div className='gal--container'>
         <div className='img1'></div>
@@ -10,7 +10,9 @@ const Gallery = () => {
         <div className='img4'></div>
         <div className='img5'></div>
         <div className='img6'></div>
-        <div className='arrow'></div>
+        <section className='arrow'>
+          <button onClick={props.onClick}></button>
+        </section>
         <div className='img7'></div>
       </div>
   )

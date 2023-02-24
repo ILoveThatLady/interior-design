@@ -1,7 +1,7 @@
 import React from 'react'
 import './Hero.css'
 
-const Hero = () => {
+const Hero = (props:any) => {
   return (
     <div className='hero--container'>
       <div className='img'></div>

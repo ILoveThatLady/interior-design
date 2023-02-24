@@ -1,7 +1,7 @@
 import React from 'react'
 import './Form.css'
 
-const Form = () => {
+const Form = (props:any) => {
   return (
         <form action="" className='form--container'>
             <h2>Let's Build <br/> Something Amazing.</h2>
